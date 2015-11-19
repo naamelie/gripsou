@@ -1,0 +1,8 @@
+= simple_form_for(@party, html: { class: 'form_horizontal'}) do |f|
+    = f.input :title, label: "Titre de la soirée", input_html:{class: "form-control"}
+    = f.input :description, label: "Description de la soirée", input_html:{class: "form-control"}
+    = f.input :organisateur, label: "Nom et Prénom de l'organisateur", input_html:{class: "form-control"}
+    = f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}, input_html:{class: "dropdown-toggle"}
+
+    %br
+    = f.button :submit

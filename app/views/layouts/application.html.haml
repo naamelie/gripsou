@@ -1,0 +1,20 @@
+!!!
+%html
+%head
+  %title Gripsou
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+
+%body
+  %nav.navbar.navbar-default
+    .container
+      .navbar-brand Gripsou
+      %ul.nav.navbar-nav
+        %li= link_to "Toutes les soirées", root_path
+        - Category.all.each do |category|
+          %li= link_to category.name, parties_path(category: category.name)
+      = link_to "Ajouter nouvelle soirée", new_party_path, class: "navbar-text navbar-right navbar-link"
+  .container
+    .col-md-6.col-md-offset-3
+    = yield

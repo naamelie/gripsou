@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  photo: MyString
+  organisateur: MyString
+  description: MyText
+  price: 1.5
+  date: 2015-11-19
+  time: 2015-11-19 17:55:33
+
+two:
+  title: MyString
+  photo: MyString
+  organisateur: MyString
+  description: MyText
+  price: 1.5
+  date: 2015-11-19
+  time: 2015-11-19 17:55:33
