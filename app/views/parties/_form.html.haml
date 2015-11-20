@@ -5,7 +5,7 @@
     = f.input :organisateur, label: "Nom et Prénom de l'organisateur", input_html:{class: "form-control"}
     /= f.input :date, label: "Date", input_html:{class: 'width30'}
     = f.input :datetime, label: "Time", input_html:{class: 'width30'}
-    = f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}, input_html:{class: "dropdown-toggle"}
-
-    %br
-    = f.button :submit
+    /= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}, input_html:{class: "dropdown-toggle"}
+    %br/
+    = f.button :submit, "Valider", class: "btn btn-sm btn-default"
+    = link_to "Retour", root_path, class: "btn btn-sm btn-default"

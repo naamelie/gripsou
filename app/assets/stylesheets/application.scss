@@ -37,6 +37,7 @@ body {
 
 h1, h2 {
   text-align: center;
+  font-family: 'Sigmar One', cursive;
 }
 
 .width30 {
@@ -113,6 +114,31 @@ h1, h2 {
 }
 
 #links {
-  margin-top: 34em;
+  margin-top: 42em;
   z-index: 1;
+  padding: 10px;
 }
+
+.burger {
+  height: 70px;
+  padding: 5px;
+}
+h1 {
+  color: #d9566d;
+  font-size: 45px;
+  margin-top: 4px;
+  font-family: 'Sigmar One', cursive;
+}
+h3 {
+  color: white;
+  font-size: 45px;
+  font-family: 'Sigmar One', cursive;
+  text-align: center;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 15px 20px;
+  font-size: 21px;
+  line-height: 1.5;
+  border-radius: 7px;
+  }
