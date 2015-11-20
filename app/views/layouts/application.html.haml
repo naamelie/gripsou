@@ -9,12 +9,22 @@
 %body
   %nav.navbar.navbar-default
     .container
+    - if user_signed_in?
       .navbar-brand Gripsou
+
       %ul.nav.navbar-nav
         %li= link_to "Toutes les soirées", root_path
+        %li= link_to "Compte", edit_user_registration_path
+        %li= link_to "Déconnexion", destroy_user_session_path, method: :delete
         - Category.all.each do |category|
           %li= link_to category.name, parties_path(category: category.name)
-      = link_to "Ajouter nouvelle soirée", new_party_path, class: "navbar-text navbar-right navbar-link"
-  .container
-    .col-md-6.col-md-offset-3
+      = link_to "Ajouter nouvelle soirée", new_party_path, class: "add-party navbar-text navbar-right navbar-link"
+    - else
+      .navbar-brand Gripsou
+      %ul.nav.navbar-nav
+        %ul.nav.navbar-nav
+          %li= link_to "S'enregistrer", new_user_registration_path
+          %li= link_to "Connexion", new_user_session_path
+    .container
+      .col-md-6.col-md-offset-3
     = yield

@@ -2,4 +2,5 @@
 - @parties.each do |party|
   .party
     %h2= link_to party.title, party
+    %p= party.user.email
     %p= party.date

@@ -26,6 +26,7 @@ html {
 }
 
 body {
+  overflow: hidden;
   height: 100%;
   background: -webkit-linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
   background:  -moz-linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
@@ -33,6 +34,14 @@ body {
   background:    -o-linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
   background:     linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
   font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.add-party {
+  margin-right: 10px;
 }
 
 .clearfix:before,

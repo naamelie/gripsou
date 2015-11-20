@@ -14,11 +14,11 @@ class PartiesController < ApplicationController
   end
 
   def new
-    @party = Party.new
+    @party = current_user.parties.build
   end
 
   def create
-    @party = Party.new(parties_params)
+    @party = current_user.parties.build(parties_params)
 
     if @party.save
       redirect_to @party
