@@ -12,8 +12,8 @@
 %body
   %nav.navbar.navbar-default
     .container
+    =image_tag "https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png", class: "burger navbar-brand"
     - if user_signed_in?
-      =image_tag "https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png", class: "burger navbar-brand"
       %h1 Gripsou
 
       %ul.nav.navbar-nav
@@ -28,8 +28,8 @@
       .navbar-brand Gripsou
       %ul.nav.navbar-nav
         %ul.nav.navbar-nav
-          %li= link_to "S'enregistrer", new_user_registration_path
-          %li= link_to "Connexion", new_user_session_path
+          %li= link_to "S'enregistrer", new_user_registration_path, class: "add-party navbar-text navbar-right navbar-link"
+          %li= link_to "Connexion", new_user_session_path, class: "add-party navbar-text navbar-right navbar-link"
     .container
       .col-md-6.col-md-offset-3
       = yield
