@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require 'masonry/transitions'
  *= require_tree .
  *= require_self
  */
@@ -26,13 +27,45 @@ html {
 }
 
 body {
-  height: 100%;
   background: -webkit-linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
   background:  -moz-linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
   background:   -ms-linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
   background:    -o-linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
   background:     linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
   font-family: 'Lato', sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: 'Sigmar One', cursive;
+}
+
+.width30 {
+  width: 30%;
+  display: inline;
+}
+
+.menu {
+    position: fixed;
+    height: 100vh;
+    width: 45vw;
+    background-color: black;
+    z-index: 2;
+    top: 0;
+    display: none;
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  display: none;
+}
+
+.menu li {
+  margin-top: 20px;
+  margin-right: 5px;
 }
 
 .clearfix:before,
@@ -81,5 +114,31 @@ body {
 }
 
 #links {
-  margin-top: 2em;
+  margin-top: 42em;
+  z-index: 1;
+  padding: 10px;
 }
+
+.burger {
+  height: 70px;
+  padding: 5px;
+}
+h1 {
+  color: #d9566d;
+  font-size: 45px;
+  margin-top: 4px;
+  font-family: 'Sigmar One', cursive;
+}
+h3 {
+  color: white;
+  font-size: 45px;
+  font-family: 'Sigmar One', cursive;
+  text-align: center;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 15px 20px;
+  font-size: 21px;
+  line-height: 1.5;
+  border-radius: 7px;
+  }

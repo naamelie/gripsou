@@ -14,11 +14,11 @@ class PartiesController < ApplicationController
   end
 
   def new
-    @party = Party.new
+    @party = current_user.parties.build
   end
 
   def create
-    @party = Party.new(parties_params)
+    @party = current_user.parties.build(parties_params)
 
     if @party.save
       redirect_to @party
@@ -46,7 +46,7 @@ class PartiesController < ApplicationController
   private
 
   def parties_params
-    params.require(:party).permit(:title, :description, :company, :category_id)
+    params.require(:party).permit(:title, :description, :image, :company, :category_id)
   end
 
   def find_party

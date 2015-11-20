@@ -1,13 +1,19 @@
 #parties
   .party
-    %h1= @party.title
-    %p= @party.photo
-    %p= @party.organisateur
-    %p= @party.description
-    %p= @party.date
-    %p= @party.time
-    %p= @party.price
-    %button.btn.btn-default= link_to "Oui", @party #lien vers confirmation soirée
+    .panel.panel-default
+      .panel-heading.pin_image
+        = image_tag @party.image.url(:medium)
+        %h1= @party.title
+        %p= @party.organisateur
+        %p= @party.description
+        %p= @party.datetime
+        /%p= @party.time
+        %p= @party.price
+        %p
+        Créé par
+        = @party.user.email
+        %br
+        %button.btn.btn-default= link_to "Oui", @party #lien vers confirmation soirée party_path pour rediriger
 #links
   = link_to "Retour", root_path, class: "btn btn-sm btn-default"
   = link_to "Editer", edit_party_path(@party), class: "btn btn-sm btn-default"

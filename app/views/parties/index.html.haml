@@ -1,5 +1,9 @@
-#parties
+#parties.transition-enabled
 - @parties.each do |party|
   .party
+  .box.panel.panel-default
+    =link_to (image_tag party.image.url(:medium)), party
+    .panel-body
     %h2= link_to party.title, party
-    %p= party.date
+    %p= party.user.email
+    %p= party.datetime
