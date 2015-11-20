@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require 'masonry/transitions'
  *= require_tree .
  *= require_self
  */
@@ -26,8 +27,6 @@ html {
 }
 
 body {
-  overflow: hidden;
-  height: 100%;
   background: -webkit-linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
   background:  -moz-linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
   background:   -ms-linear-gradient(90deg, #c72c48 10%, #d9566d 90%);
@@ -36,12 +35,36 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
 }
 
-.add-party {
-  margin-right: 10px;
+.width30 {
+  width: 30%;
+  display: inline;
+}
+
+.menu {
+    position: fixed;
+    height: 100vh;
+    width: 45vw;
+    background-color: black;
+    z-index: 2;
+    top: 0;
+    display: none;
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  display: none;
+}
+
+.menu li {
+  margin-top: 20px;
+  margin-right: 5px;
 }
 
 .clearfix:before,
@@ -90,5 +113,6 @@ h1 {
 }
 
 #links {
-  margin-top: 2em;
+  margin-top: 34em;
+  z-index: 1;
 }

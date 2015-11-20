@@ -12,6 +12,21 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("DOMContentLoaded", function() {
+  var button = document.querySelector(".burger")
+  var menu = document.querySelector(".menu")
+  var blur = document.querySelector(".blur");
+  button.addEventListener("click", function() {
+    menu.style.display = "block"
+    blur.style.display = "block"
+  });
+  blur.addEventListener("click", function() {
+    menu.style.display = "none"
+    blur.style.display = "none"
+  })
+})

@@ -46,7 +46,7 @@ class PartiesController < ApplicationController
   private
 
   def parties_params
-    params.require(:party).permit(:title, :description, :company, :category_id)
+    params.require(:party).permit(:title, :description, :image, :company, :category_id)
   end
 
   def find_party
